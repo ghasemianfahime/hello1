@@ -1,0 +1,22 @@
+This is a project for implementing and comparing scientific collaboration formation algorithms.
+
+We have used hypergraph for modeling the collaboration relations. Each coauthorship is considered as a collaboration among a set of scholars on a set of skills.
+
+We have used Sparql Endpoint of Northwestern University to extract information about scholars, journals and publications. Next, below scripts have been used to add MeSH terms and citation broken by years from PubMed and Scopus respectively:
+
+Add_Scopus.R
+Add_pubMed.R
+Scopus_Query_Construction.R
+
+The extracted information is saved in a database using below script:
+
+Data2MySQL.R
+
+In the following we explain each script breifly:
+1.convert2HyperGraph.R: for modeling the collaboration relation as hypergraph
+2.my_algorithm.R: for implementing the proposed algorithm
+3.EnhancedEsteiner.R: for implementing ENhancedEsteiner algorithm
+4.comapre_algorithms.R: for executing team formation algorithm on different sets of required skills
+5.DreamRealTeamSim.R: for computing the Jaccard similarity of the teams resulted from the algorithms and the real teams while citation counts is considered as the success measure
+6.skill_level_measurement_comparision.R: for comparing different functions for skill level measurement 
+
